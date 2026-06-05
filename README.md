@@ -25,14 +25,13 @@ A[3:0], B[3:0]  →  4× (2×2 Vedic Multipliers)  →  Half Adder Accumulation 
 
 ```
 vedic_multiplier/
-├── src/
-│   ├── half_adder.v       # Half adder primitive
-│   ├── vedic_2x2.v        # 2×2 Vedic sub-multiplier
-│   └── vedic_4x4.v        # Top-level 4×4 multiplier
-├── sim/
-│   └── tb_vedic_4x4.v     # Exhaustive testbench (all 256 input combos)
-└── constraints/
-    └── artix7.xdc         # Pin and timing constraints
+├── README.md              # Project documentation
+├── artix7.xdc             # Pin and timing constraints (Artix-7)
+├── half_adder.v           # Half adder primitive
+├── vedic_2x2.v            # 2×2 Vedic sub-multiplier
+├── vedic_4x4.v            # 4×4 Vedic multiplier core
+├── vedic_4bit_top.v       # Top-level module (scalar I/O pins)
+└── tb_vedic_4x4.v         # Exhaustive testbench (all 256 input combos)
 ```
 
 ---
@@ -56,3 +55,7 @@ vedic_multiplier/
 4. **Deploy:** Generate Bitstream → Program Device
 
 ---
+
+## Author
+
+**Otniel Jhirad** · [GitHub](https://github.com/0tniel) · [LinkedIn](https://www.linkedin.com/in/otniel-jhirad-068169282) · jhiradotniel@gmail.com
