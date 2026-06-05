@@ -21,6 +21,20 @@ A[3:0], B[3:0]  →  4× (2×2 Vedic Multipliers)  →  Half Adder Accumulation 
 
 ---
 
+## Hardware Validation
+
+Tested on the **Eisler Artix-7 FPGA Board (XC7A35T)**. Slide switches set the inputs; LEDs display the 8-bit product.
+
+**12 × 12 = 144 (`10010000`)**
+
+![Hardware Result 12x12](Hardware%20Result%2012*12.png)
+
+**14 × 15 = 210 (`11010010`)**
+
+![Hardware Result 14x15](Hardware%20Result%2014*15.png)
+
+---
+
 ## Project Structure
 
 ```
@@ -31,7 +45,9 @@ vedic_multiplier/
 ├── vedic_2x2.v            # 2×2 Vedic sub-multiplier
 ├── vedic_4x4.v            # 4×4 Vedic multiplier core
 ├── vedic_4bit_top.v       # Top-level module (scalar I/O pins)
-└── tb_vedic_4x4.v         # Exhaustive testbench (all 256 input combos)
+├── tb_vedic_4x4.v         # Exhaustive testbench (all 256 input combos)
+├── Hardware Result 12*12.png   # Board photo — 12×12=144
+└── Hardware Result 14*15.png   # Board photo — 14×15=210
 ```
 
 ---
@@ -49,13 +65,8 @@ vedic_multiplier/
 
 ## How to Run
 
-1. Open `vivado/vedic_multiplier.xpr` in Xilinx Vivado
-2. **Simulate:** Flow Navigator → Run Behavioral Simulation
-3. **Synthesize:** Flow Navigator → Run Synthesis → Run Implementation
-4. **Deploy:** Generate Bitstream → Program Device
-
----
-
-## Author
-
-**Otniel Jhirad** · [GitHub](https://github.com/0tniel) · [LinkedIn](https://www.linkedin.com/in/otniel-jhirad-068169282) · jhiradotniel@gmail.com
+1. Clone the repo and open the project in **Xilinx Vivado**
+2. Add all `.v` files as sources and `artix7.xdc` as a constraint
+3. **Simulate:** Flow Navigator → Run Behavioral Simulation
+4. **Synthesize & Implement:** Flow Navigator → Run Synthesis → Run Implementation
+5. **Deploy:** Generate Bitstream → Connect board → Program Device
