@@ -27,11 +27,11 @@ Tested on the **Eisler Artix-7 FPGA Board (XC7A35T)**. Slide switches set the in
 
 **12 × 12 = 144 (`10010000`)**
 
-![Hardware Result 12x12](Hardware%20Result%2012*12.png)
+![Hardware Result 12x12](hardware_result_12x12.png)
 
 **14 × 15 = 210 (`11010010`)**
 
-![Hardware Result 14x15](Hardware%20Result%2014*15.png)
+![Hardware Result 14x15](hardware_result_14x15.png)
 
 ---
 
