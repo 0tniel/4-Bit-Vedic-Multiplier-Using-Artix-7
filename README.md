@@ -56,7 +56,3 @@ vedic_multiplier/
 4. **Deploy:** Generate Bitstream → Program Device
 
 ---
-
-## Author
-
-**Otniel Jhirad** · [GitHub](https://github.com/0tniel) · [LinkedIn](https://www.linkedin.com/in/otniel-jhirad-068169282) · jhiradotniel@gmail.com
